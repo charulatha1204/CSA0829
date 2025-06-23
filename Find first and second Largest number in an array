@@ -1,0 +1,12 @@
+arr = [12, 45, 7, 89, 23, 67]
+
+first = second = float('-inf')
+for num in arr:
+    if num > first:
+        second = first
+        first = num
+    elif first > num > second:
+        second = num
+
+print("First largest:", first)
+print("Second largest:", second)
