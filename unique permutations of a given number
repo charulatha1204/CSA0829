@@ -1,0 +1,7 @@
+from itertools import permutations
+
+num = input("Enter a number: ")
+unique_perms = set(permutations(num))
+
+for perm in sorted(unique_perms):
+    print(''.join(perm))
