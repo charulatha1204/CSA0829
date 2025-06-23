@@ -1,0 +1,11 @@
+num = int(input("Enter a number: "))
+s = str(num)
+if len(s) % 2 == 0:
+    first = int(s[:len(s)//2])
+    second = int(s[len(s)//2:])
+    if (first + second) ** 2 == num:
+        print("Tech Number")
+    else:
+        print("Not a Tech Number")
+else:
+    print("Not a Tech Number")
