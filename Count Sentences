@@ -1,0 +1,19 @@
+def count_b_sentences(text):
+    # Split text into sentences using ., ?, or ! as delimiters
+    import re
+    sentences = re.split(r'[.!?]', text)
+    
+    # Count sentences that start with 'B' or 'b' after stripping spaces
+    count = 0
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if sentence and sentence[0].lower() == 'b':
+            count += 1
+    return count
+
+# Input paragraph
+paragraph = input("Enter a paragraph:\n")
+
+# Count and display result
+b_count = count_b_sentences(paragraph)
+print("Number of sentences starting with 'B':", b_count)
