@@ -1,0 +1,18 @@
+def simple_interest(p, t, gender, senior):
+    if senior == 'y':
+        rate = 15
+    elif gender == 'm':
+        rate = 12
+    else:
+        rate = 10
+    return (p * rate * t) / 100
+
+# Input
+p = float(input("Enter the principal amount: "))
+t = int(input("Enter the no of years: "))
+gender = input("Gender (m/f): ").lower()
+senior = input("Is customer senior citizen (y/n): ").lower()
+
+# Calculate and print interest
+interest = simple_interest(p, t, gender, senior)
+print("Interest:", int(interest))
