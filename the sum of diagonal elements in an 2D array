@@ -1,0 +1,17 @@
+n = int(input("Enter size of square matrix: "))
+matrix = []
+
+# Input matrix
+print("Enter matrix row by row:")
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# Calculate and print diagonal elements
+diag_sum = 0
+print("Diagonal elements:")
+for i in range(n):
+    print(matrix[i][i], end=" ")
+    diag_sum += matrix[i][i]
+
+print("\nSum of diagonal elements:", diag_sum)
