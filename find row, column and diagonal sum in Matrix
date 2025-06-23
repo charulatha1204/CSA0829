@@ -1,0 +1,22 @@
+n = int(input("Enter the size of the square matrix: "))
+matrix = []
+
+print("Enter the matrix row by row:")
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# Calculate row sums
+row_sums = [sum(row) for row in matrix]
+
+# Calculate column sums
+col_sums = [sum(matrix[i][j] for i in range(n)) for j in range(n)]
+
+# Calculate diagonal sums
+main_diag_sum = sum(matrix[i][i] for i in range(n))
+sec_diag_sum = sum(matrix[i][n - 1 - i] for i in range(n))
+
+print("Row sums:", row_sums)
+print("Column sums:", col_sums)
+print("Main diagonal sum:", main_diag_sum)
+print("Secondary diagonal sum:", sec_diag_sum)
