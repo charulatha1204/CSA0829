@@ -1,0 +1,15 @@
+def peter_vehicles(m, n, x):
+    remaining = m % n
+    peter_gets = min(x, remaining)
+    
+    print(f"Peter gets {peter_gets} vehicle(s).")
+    if peter_gets % 2 == 0:
+        print("Peter is luckier (even number).")
+    else:
+        print("Peter is not luckier (odd number).")
+
+# Example usage
+m = 17
+n = 5
+x = 3
+peter_vehicles(m, n, x)
