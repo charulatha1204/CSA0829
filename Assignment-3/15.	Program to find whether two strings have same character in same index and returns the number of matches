@@ -1,0 +1,8 @@
+def count_index_matches(s1, s2):
+    return sum(c1 == c2 for c1, c2 in zip(s1, s2))
+
+# Sample input
+S1 = "what"
+S2 = "watch"
+
+print(count_index_matches(S1, S2)) 
