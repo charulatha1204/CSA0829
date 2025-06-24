@@ -1,0 +1,17 @@
+def rename_duplicates(lst):
+    counts = {}
+    result = []
+    for item in lst:
+        if item not in counts:
+            counts[item] = 0
+            result.append(item)
+        else:
+            counts[item] += 1
+            new_name = f"{item}_{counts[item]}"
+            result.append(new_name)
+    return result
+
+# Example usage
+my_list = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+renamed_list = rename_duplicates(my_list)
+print(renamed_list)
