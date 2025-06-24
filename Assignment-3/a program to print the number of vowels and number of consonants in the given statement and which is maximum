@@ -1,0 +1,15 @@
+def count_vowels_consonants(text):
+    vowels = set("aeiouAEIOU")
+    v_count = sum(ch in vowels for ch in text)
+    c_count = sum(ch.isalpha() and ch not in vowels for ch in text)
+    print(f"Number of vowels = {v_count} Number of Consonants = {c_count}")
+    if v_count > c_count:
+        print("Vowels are maximum")
+    elif c_count > v_count:
+        print("Consonants are maximum")
+    else:
+        print("Vowels and Consonants are equal")
+
+# Sample input
+text = "Saveetha School of Engineering Sample"
+count_vowels_consonants(text)
