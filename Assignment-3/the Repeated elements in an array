@@ -1,0 +1,10 @@
+from collections import Counter
+
+def print_repeated_elements(arr):
+    freq = Counter(arr)
+    repeated = [item for item, count in freq.items() if count > 1]
+    print("Repeated elements:", repeated)
+
+# Example usage
+arr = [1, 2, 3, 2, 4, 5, 3, 6, 1]
+print_repeated_elements(arr)
