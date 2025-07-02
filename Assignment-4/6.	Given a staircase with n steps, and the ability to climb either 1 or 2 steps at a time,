@@ -1,0 +1,9 @@
+def count_ways(n):
+    if n <= 1:
+        return 1
+    else:
+        return count_ways(n - 1) + count_ways(n - 2)
+
+# Example usage
+n = int(input("Enter number of steps: "))
+print("Number of ways to climb:", count_ways(n))
