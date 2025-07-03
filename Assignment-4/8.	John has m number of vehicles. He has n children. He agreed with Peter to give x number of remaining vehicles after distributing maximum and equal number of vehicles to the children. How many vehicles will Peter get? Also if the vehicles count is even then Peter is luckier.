@@ -1,0 +1,15 @@
+# Input values
+m = int(input("Enter total number of vehicles (m): "))
+n = int(input("Enter number of children (n): "))
+
+# Compute remaining vehicles
+x = m % n
+
+# Output how many vehicles Peter gets
+print(f"Peter will get {x} vehicles.")
+
+# Check if Peter is luckier
+if x % 2 == 0:
+    print("Peter is luckier (even number of vehicles).")
+else:
+    print("Peter is not luckier (odd number of vehicles).")
