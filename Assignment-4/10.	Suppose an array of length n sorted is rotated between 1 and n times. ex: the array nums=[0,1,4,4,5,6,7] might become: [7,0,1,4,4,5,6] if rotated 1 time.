@@ -1,0 +1,25 @@
+def find_rotation_count(nums):
+    n = len(nums)
+    low, high = 0, n - 1
+
+    while low < high:
+        mid = (low + high) // 2
+
+        # If middle element is less than the high element,
+        # then minimum is in left half (including mid)
+        if nums[mid] < nums[high]:
+            high = mid
+        elif nums[mid] > nums[high]:
+            # Minimum must be in right half
+            low = mid + 1
+        else:
+            # If equal, reduce high by 1 to handle duplicates
+            high -= 1
+
+    # When loop ends, low == high pointing to min element
+    return low
+
+# Example usage
+nums = [7, 0, 1, 4, 4, 5, 6]
+rotation_index = find_rotation_count(nums)
+print(f"The array is rotated {rotation_index} times.")
